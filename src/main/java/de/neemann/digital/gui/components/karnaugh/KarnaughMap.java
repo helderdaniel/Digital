@@ -61,13 +61,21 @@ public class KarnaughMap implements Iterable<KarnaughMap.Cover> {
                 addToCol(1, 2, 1, true);
                 addToCol(2, 2, 1, false);
                 addToCol(3, 2, 1, false);
+                /*
                 addToCol(0, 2, 2, false);
                 addToCol(1, 2, 2, true);
                 addToCol(2, 2, 2, true);
                 addToCol(3, 2, 2, false);
+                */
+                addToCol(0, 2, 2, true);
+                addToCol(1, 2, 2, false);
+                addToCol(2, 2, 2, false);
+                addToCol(3, 2, 2, true);
+
                 headerLeft = new Header(0, true, false);
                 headerTop = new Header(1, true, true, false, false);
-                headerBottom = new Header(2, false, true, true, false);
+                //headerBottom = new Header(2, false, true, true, false);
+                headerBottom = new Header(2, true, false, false, true);
                 headerRight = null;
                 break;
             case 4:
@@ -79,22 +87,38 @@ public class KarnaughMap implements Iterable<KarnaughMap.Cover> {
                 addToRow(1, 4, 0, true);
                 addToRow(2, 4, 0, false);
                 addToRow(3, 4, 0, false);
+                /*
                 addToRow(0, 4, 1, false);
                 addToRow(1, 4, 1, true);
                 addToRow(2, 4, 1, true);
                 addToRow(3, 4, 1, false);
+                */
+                addToRow(0, 4, 1, true);
+                addToRow(1, 4, 1, false);
+                addToRow(2, 4, 1, false);
+                addToRow(3, 4, 1, true);
+
                 addToCol(0, 4, 2, true);
                 addToCol(1, 4, 2, true);
                 addToCol(2, 4, 2, false);
                 addToCol(3, 4, 2, false);
+                /*
                 addToCol(0, 4, 3, false);
                 addToCol(1, 4, 3, true);
                 addToCol(2, 4, 3, true);
                 addToCol(3, 4, 3, false);
+                */
+                addToCol(0, 4, 3, true);
+                addToCol(1, 4, 3, false);
+                addToCol(2, 4, 3, false);
+                addToCol(3, 4, 3, true);
+
                 headerLeft = new Header(0, true, true, false, false);
-                headerRight = new Header(1, false, true, true, false);
+                //headerRight = new Header(1, false, true, true, false);
+                headerRight = new Header(1, true, false, false, true);
                 headerTop = new Header(2, true, true, false, false);
-                headerBottom = new Header(3, false, true, true, false);
+                //headerBottom = new Header(3, false, true, true, false);
+                headerBottom = new Header(3, true, false, false, true);
                 break;
             default:
                 throw new KarnaughException(Lang.get("err_toManyVars"));
